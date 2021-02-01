@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+header {
+  background:white;
+  color: black;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+
+.contenu {
+  width: 100%;
+  background: rebeccapurple;
+  min-height: 500px;
+}
+
+footer {
+  background:black;
+  min-height: 300px;
+  text-align: center;
+
+}
+header
+{
+display:flex;
+}
