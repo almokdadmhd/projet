@@ -1,0 +1,16 @@
+.get{/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff7400+1,ff7400+18,ff7400+72 */
+    background: #ff7400; /* Old browsers */
+    background: -moz-linear-gradient(left,  #ff7400 1%, #ff7400 18%, #ff7400 72%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #ff7400 1%,#ff7400 18%,#ff7400 72%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #ff7400 1%,#ff7400 18%,#ff7400 72%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff7400', endColorstr='#ff7400',GradientType=1 ); /* IE6-9 */
+    
+}
+.global{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#49c0f0+0,2cafe3+100;Blue+3D+%2311 */
+background: #49c0f0; /* Old browsers */
+background: -moz-linear-gradient(left,  #49c0f0 0%, #2cafe3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  #49c0f0 0%,#2cafe3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  #49c0f0 0%,#2cafe3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#49c0f0', endColorstr='#2cafe3',GradientType=1 ); /* IE6-9 */
+}
