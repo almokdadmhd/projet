@@ -219,11 +219,4 @@ console.log(avecNon(map1));
 
 
 
- var car =  [ "moh", "non", "joe", "jamal", "souad", "flourance"];
-console.log(car [4]);
-car.sort();
-console.log(car);
-car.lastIndexOf()
-
-
 
