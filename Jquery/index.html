@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -13,13 +13,13 @@
   <body>
     <h1 onclick="hideH1()">MON H1</h1>
     <ul>
-      <li> html</li>
-      <li> jquery</li>
-      <li> css</li>
-      <li class="cacher"> bootstrab</li>
-      <li> html</li>
-      <li> jquery</li>
-      <li> css</li>
+      <li>html</li>
+      <li>jquery</li>
+      <li>css</li>
+      <li class="cacher">bootstrab</li>
+      <li>html</li>
+      <li>jquery</li>
+      <li>css</li>
     </ul>
     <button onclick="hideLi()" type="button" class="btn btn-primary">
       hide
@@ -27,15 +27,29 @@
     <button onclick="hideCalass()" type="button" class="btn btn-warning">
       cacher li class
     </button>
-    <button onclick="hideCalass()" type="button" class="btn btn-warning">
-      cacher li class
-    </button>
+ 
+   
 
-    <script src="js/bootstrap.min.js"></script>
+
+
+    
+
     <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/all.min.js"></script>
 
     <script>
+      $(document).ready(function ()) {
+
+
+      }
+
+
+
+
+
+
+
       function hideH1() {
         $("h1").hide();
       }
@@ -45,7 +59,13 @@
       }
       function hideCalass() {
         $(".cacher ").hide();
+        $(this.show);
       }
+
+
+
+     
+
     </script>
   </body>
 </html>
