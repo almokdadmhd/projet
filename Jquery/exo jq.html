@@ -60,6 +60,16 @@
         $("input[type=number]").val(10);
       }
 
+      $(document).ready(function () {
+        $("#btn1").click(function () {
+          $("img").before("<b>Before</b>");
+        });
+
+        $("#btn2").click(function () {
+          $("img").after("<i>After</i>");
+        });
+      });
+
       function moyenne(tab) {
         if (tab.length === 0) {
           return 0;
@@ -152,43 +162,161 @@
       function reverchaine(ch) {
         let chInv = "";
         for (i = ch.length - 1; i >= 0; i--) {
-          chInv = ch[i];
+          chInv += ch[i];
         }
         return chInv;
       }
-      console.log(reverchaine("salut"));
+      console.log(reverchaine("helo"));
 
-      function compteMotes(ch1) {
+      function nbMots(ch1) {
         return ch1.split(" ").length;
       }
       let tab = "salut bonjour ";
-      console.log(compteMotes(tab));
+      console.log(nbMots(tab));
 
-
-
-      function nubMots(ch1,ch2) {
-        compteMotes (ch1)==nubMots (ch2)
-        return true; {
-  
-        }
-        
+      function compareNbMots(ch1, ch2) {
+        return nbMots(ch1) == nbMots(ch2);
       }
-      console.log (())
-       
+      console.log(compareNbMots("helo", "salut bonjour"));
+
+      function careeNombr(i) {
+        return Math.pow(i, 2);
+      }
+
+      console.log(careeNombr(9));
+
+      function racineNombr(i) {
+        return Math.sqrt(i);
+      }
+
+      console.log(racineNombr(9));
+
+      function perimeTre(a, b) {
+        return (a + b) * 2;
+      }
+      console.log(perimeTre(2, 3));
+
+      function sumNom(a, b) {
+        if (a + b > 100) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(sumNom(50, 55));
+
+      function second(a, b) {
+        return a * 3600 + b * 60;
+      }
+      console.log(second(1, 3));
+
+      function diversNomb(a, b) {
+        if (a % b == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(diversNomb(8, 4));
+      console.log(diversNomb(9, 4));
+
+      function reverseTableau(no) {
+        let tabvers = [];
+        for (i = no.length - 1; i >= 0; i--) {
+          tabvers += no[i];
+        }
+        return tabvers;
+      }
+      console.log(reverseTableau([1, 2, 3, 4, 5]));
+
+      function pushreverseTab(tab) {
+        let tabvers = [];
+        for (i = tab.length - 1; i >= 0; i--) {
+          tabvers.push(tab[i]);
+        }
+        return tabvers;
+      }
+      console.log(pushreverseTab([1, 2, 3, 4, 5]));
+
+
+
+      function impotMo(age) {
+        let messag=""
+        switch (true) {
+          case age<= 10:
+            message "enfant";
+                    
 
 
 
 
 
-      $(document).ready(function () {
-        $("#btn1").click(function () {
-          $("img").before("<b>Before</b>");
-        });
+          default:
+        }
+      }
 
-        $("#btn2").click(function () {
-          $("img").after("<i>After</i>");
-        });
-      });
+
+
+
+
+
+
+
+
+
+
+      function objet(tab) {
+        let info = "";
+        for (i = 0; tab.length; i++) {
+          if (0 < tab[i].revenu <= 1000) {
+            return 5 % revenu;
+          }
+          if (0 < tab[i].revenu <= 1000) {
+            return 3 % secu;
+          }
+          if (1 < tab[i].catogerie < 10) {
+            return enfant;
+          }
+        }
+        return info;
+        for (i = 0; tab.length; i++) {
+          if (1000 < tab[i].revenu <= 2000) {
+            return 7 % revenu;
+          }
+          if (0 < tab[i].revenu <= 1000) {
+            return 6 % secu;
+          }
+          if (11 < tab[i].catogerie < 18) {
+            return adolesent;
+          }
+        }
+        return info;
+        for (i = 0; tab.length; i++) {
+          if (2000 < tab[i].revenu <= 3000) {
+            return 11 % revenu;
+          }
+          if (0 < tab[i].revenu <= 1000) {
+            return 8 % secu;
+          }
+          if (19 < tab[i].catogerie <= 45) {
+            return jeune;
+          }
+        }
+        return info;
+        for (i = 0; tab.length; i++) {
+          if (tab[i].revenu <= 3000) {
+            return 15 % revenu;
+          }
+          if (0 < tab[i].revenu <= 1000) {
+            return 12 % secu;
+          }
+          if (tab[i].catogerie > 45) {
+            return vieux;
+          }
+        }
+        return info;
+      }
+      console.log(objet());
     </script>
   </body>
 </html>
