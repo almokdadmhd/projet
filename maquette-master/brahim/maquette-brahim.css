@@ -1,0 +1,169 @@
+header div .ligne {
+    background: #ff3232;
+    background: -moz-linear-gradient(left, #ff3232 0%, #fce388 100%);
+    background: -webkit-linear-gradient(left, #ff3232 0%, #fce388 100%);
+    background: linear-gradient(to right, #ff3232 0%, #fce388 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#fce388',GradientType=1 );
+  
+    color: white;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  
+  .ligne_verticale {
+    width: 20px;
+    border-left: 2px solid gray;
+    height: 20px;
+    padding: 15px;
+  }
+  .ligne_verticale1 {
+    width: 30px;
+    border-left: 2px solid gray;
+    height: 20px;
+    padding: 15px;
+    margin-left: 20px;
+  }
+  .barredumilieu
+  {
+      display: inline;
+      border-right:1px solid black; 
+  }
+  .textebleu {
+    color: #4c4d4f;
+  }
+  .texttel {
+    font-size: 15px;
+    color: #979999;
+  }
+  .tableau {
+    margin: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .boutonhome
+  {
+      background-color:#62bfe6 ;
+      color: white;
+  }
+  .navbar
+  {
+      padding: 0rem;
+  
+  }
+  .salut
+  {
+      background-color: #4c4d4f;
+  
+  }
+  #blanc
+  {
+      color: white;
+  }
+  #mycarousel
+  {
+  margin-left: 00px;
+  margin-top: 20px;
+  }
+  section
+  {
+      background-color: #62bfe6;
+  }
+  section
+  {
+   padding: 23px;
+   width: 290px;
+   color: white;
+   margin-right: 50px;
+  }
+  .icone
+  {
+      background-color: #62bfe6;
+      min-height: 100px;
+      min-width: 100px;
+      padding: 20px;
+  }
+  h4{
+      padding-left: 30px;
+  }
+  .petittexte
+  {
+      font-size: 12.8px;
+      color: #979999;
+  }
+  #negatif
+  {
+      margin-top: -3rem;
+  }
+  #traitbleu
+  {
+      border:2px solid #62bfe6 ;
+  
+  }
+  h5{
+      font-size: 40px;
+  }
+  #petitservices
+  {
+      font-size: 15px;
+      color: #4c4d4f;
+  }
+  .lesboutons
+  {
+      margin-left: 120px;
+  }
+  .lesboutons1
+  {
+      margin-top: 80px;
+  }
+  .helpcenter
+  {
+   min-width: 365px;
+   
+  }
+  h6{
+      font-size: 30px;
+      margin-top: 30px;
+      
+  }
+  .texthelp
+  {
+      font-size: 25px;
+      margin-left: 25px;
+  }
+  .texthelp2
+  {
+      margin-left: 25px;
+  }
+  .texthelp3
+  {
+      margin-left: 25px;
+      font-size: 27px;
+  }
+  .traitblanc
+  {border:1px solid white;
+  }
+  .sectionanna
+  {
+      background-color:#f3f3f3 ;
+      color: black;
+      min-width: 365px;
+  }
+  .annaramirez
+  {
+      color: #62bfe6;
+  }
+  .div2{
+      background-color:darkorange;
+      min-height: 200px;
+  }
+  #textfooter
+  {
+      font-size: 30px;
+      color:white;
+  }
+  .textfooter2
+  {
+      font-size: 14px;
+      color:white;
+  }
