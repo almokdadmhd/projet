@@ -1,0 +1,56 @@
+function getAge(age) {
+    if (age <= 10) {
+      message = "enfant";
+    } else {
+      if (age <= 18) {
+        message = "adolesent";
+      } else {
+        if (age <= 45) {
+          message = "jeune";
+        } else {
+          if (age > 45) message = "vieux";
+        }
+      }
+    }
+    return message;
+  }
+  console.log(getAge(25));
+
+  function getImpots(revenu) {
+    if (revenu < 1000) {
+      return (revenu * 5) / 100;
+    } else {
+      if (revenu < 2000) {
+        return (revenu * 7) / 100;
+      } else {
+        if (revenu <= 3000) {
+          return (revenu * 11) / 100;
+        } else {
+          if (revenu > 3000) {
+            return (revenu * 15) / 100;
+          }
+        }
+      }
+    }
+    return revenu;
+  }
+  console.log(getImpots(900));
+
+  function getSecu(revenu) {
+    if (revenu < 1000) {
+      return (revenu * 3) / 100;
+    } else {
+      if (revenu < 2000) {
+        return (revenu * 6) / 100;
+      } else {
+        if (revenu <= 3000) {
+          return (revenu * 8) / 100;
+        } else {
+          if (revenu > 3000) {
+            return (revenu * 12) / 100;
+          }
+        }
+      }
+    }
+  }
+  console.log(getSecu(900));

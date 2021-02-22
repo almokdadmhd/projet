@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <title>button lien</title>
+  </head>
+  <body>
+    <h1>Helo!</h1>
+    <div>
+      <a
+        target="_blank "
+        class="btn btn-primary b1"
+        href="https://www.google.fr/"
+        role="button "
+        >google</a
+      >
+      <a
+        class="btn btn-secondary b1"
+        href="https://www.minecraft.net/fr-fr/"
+        role="button"
+        target="_blank"
+        >Maincraft</a
+      >
+      <a
+        class="btn btn-warning b1"
+        href=" https://www.apple.com/"
+        role="button"
+        target="_blank"
+        >Apple</a
+      >
+      <a
+        class="btn btn-info b1"
+        href="https://www.samsung.com/fr/"
+        role="button"
+        target="_blank"
+        >Samsung</a
+      >
+    </div>
+    <br />
+    <button onclick="modifier()">Changer lien</button>
+
+    <br />
+
+    <button
+      type="button"
+      class="btn btn-lg btn-danger pop"
+      data-toggle="popover"
+      title="Popover title"
+      data-content="And here's some amazing content. It's very engaging. Right?"
+    >
+      Click to toggle popover
+    </button>
+
+    <br />
+    <button onclick="changerPop()">Changer pop</button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td class="">12</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td class="">10</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td class="">9</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Franck</td>
+          <td class="">18</td>
+        </tr>
+      </tbody>
+    </table>
+ 
+
+
+
+   
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+
+    <script>
+      function modifier() {
+        $(".b1").attr("href", "https://www.w3schools.com/html/  ");
+        $(".b1  ").text("w3schools.com");
+      }
+
+      function changerPop() {
+        $(".pop").attr("data-content", "descreption de la popover   ");
+        $(".pop  ").text("w3schools");
+      }
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+
+
+
+
+
+        function getClass(note){
+             switch(true){
+          case note <10:
+          return "danger";
+          case note <=15:
+          return "info";
+          default:
+          return "success";
+        }
+
+      }
+
+
+
+      function notes() {
+
+        $("td:last-child").each(function () {
+        let notes = $(this).text();
+       let classe=getClasse(note);
+        $(this).html('<button type="button" classe= "btn btn-'+getClasse($(this).text())+'">'+$(this).text()+ '</button>'
+
+
+
+
+        });
+      }
+        
+    </script>
+  </body>
+</html>

@@ -6,8 +6,10 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/css images.css" />
 
     <title>JS Exo</title>
+    <body onload="notes()"></body>
   </head>
   <body>
     <h1>Bonjour</h1>
@@ -31,6 +33,107 @@
 
     <button id="btn1">Insert before</button>
     <button id="btn2">Insert after</button>
+    <div>
+      <a
+        target="_blank "
+        class="btn btn-primary b1"
+        href="https://www.google.fr/"
+        role="button "
+        >google</a
+      >
+      <a
+        class="btn btn-secondary b1"
+        href="https://www.minecraft.net/fr-fr/"
+        role="button"
+        target="_blank"
+        >Maincraft</a
+      >
+      <a
+        class="btn btn-warning b1"
+        href=" https://www.apple.com/"
+        role="button"
+        target="_blank"
+        >Apple</a
+      >
+      <a
+        class="btn btn-info b1"
+        href="https://www.samsung.com/fr/"
+        role="button"
+        target="_blank"
+        >Samsung</a
+      >
+    </div>
+    <br />
+    <button onclick="modifier()">Changer lien</button>
+
+    <br />
+
+    <button
+      type="button"
+      class="btn btn-lg btn-danger pop"
+      data-toggle="popover"
+      title="Popover title"
+      data-content="And here's some amazing content. It's very engaging. Right?"
+    >
+      Click to toggle popover
+    </button>
+
+    <br />
+    <button onclick="changerPop()">Changer pop</button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nom</th>
+          <th scope="col">Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td class="">12</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td class="">10</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td class="">9</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Franck</td>
+          <td class="">18</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="../images/html.jpg" height="300" width="500" />
+
+          <img src="../images/image.png" height="100" width="100" />
+          <p>Do you need an electrician</p>
+          <img src="../images/photo7.jpg" height="100" width="100" />
+          <p>Do you need an electrician</p>
+
+          <img src="../images/photo6.jpg" height="100" width="100" />
+          <p>Do you need an electrician</p>
+
+          <img src="../images/photo.jpg" height="100" width="100" />
+          <p>Do you need an electrician</p>
+        </div>
+        <div class="col-sm">
+          <p>Electrical testing</p>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -68,6 +171,10 @@
         $("#btn2").click(function () {
           $("img").after("<i>After</i>");
         });
+      });
+
+      $(function () {
+        $('[data-toggle="popover"]').popover();
       });
 
       function moyenne(tab) {
@@ -238,85 +345,118 @@
       }
       console.log(pushreverseTab([1, 2, 3, 4, 5]));
 
-
-
-      function impotMo(age) {
-        let messag=""
+      function getSecue(revenu) {
         switch (true) {
-          case age<= 10:
-            message "enfant";
-                    
-
-
-
-
-
-          default:
+          case revenu <= 1000:
+            return (revenu * 3) / 100;
+          case revenu <= 2000:
+            return (revenu * 6) / 100;
+          case revenu <= 2000:
+            return (revenu * 8) / 100;
+          case revenu > 3000:
+            return (revenu * 12) / 100;
         }
       }
+      console.log(getSecu(300));
 
+      function getImpo(revenu) {
+        switch (true) {
+          case revenu <= 1000:
+            return (revenu * 5) / 100;
+          case revenu <= 2000:
+            return (revenu * 7) / 100;
+          case revenu <= 3000:
+            return (revenu * 11) / 100;
+          case revenu > 3000:
+            return (revenu * 15) / 100;
+        }
+      }
+      console.log(getSecu(900));
 
-
-
-
-
-
-
-
+      function getAge(moncatogerie) {
+        switch (true) {
+          case moncatogerie < 10:
+            return "enfant";
+          case moncatogerie < 18:
+            return "adolesent";
+          case moncatogerie < 45:
+            return "jeune";
+          case moncatogerie > 45:
+            return "vieux";
+        }
+      }
+      console.log(getAge(25));
 
 
       function objet(tab) {
+        let i;
         let info = "";
-        for (i = 0; tab.length; i++) {
-          if (0 < tab[i].revenu <= 1000) {
-            return 5 % revenu;
-          }
-          if (0 < tab[i].revenu <= 1000) {
-            return 3 % secu;
-          }
-          if (1 < tab[i].catogerie < 10) {
-            return enfant;
-          }
-        }
-        return info;
-        for (i = 0; tab.length; i++) {
-          if (1000 < tab[i].revenu <= 2000) {
-            return 7 % revenu;
-          }
-          if (0 < tab[i].revenu <= 1000) {
-            return 6 % secu;
-          }
-          if (11 < tab[i].catogerie < 18) {
-            return adolesent;
-          }
-        }
-        return info;
-        for (i = 0; tab.length; i++) {
-          if (2000 < tab[i].revenu <= 3000) {
-            return 11 % revenu;
-          }
-          if (0 < tab[i].revenu <= 1000) {
-            return 8 % secu;
-          }
-          if (19 < tab[i].catogerie <= 45) {
-            return jeune;
-          }
-        }
-        return info;
-        for (i = 0; tab.length; i++) {
-          if (tab[i].revenu <= 3000) {
-            return 15 % revenu;
-          }
-          if (0 < tab[i].revenu <= 1000) {
-            return 12 % secu;
-          }
-          if (tab[i].catogerie > 45) {
-            return vieux;
-          }
-        }
+        for (i = 0; i < tab.length; i++);
+        nom = tab[i].nom;
+        prenom = tab[i].prenom;
+        revenue = getImpo(tab[i].revenu);
+        secu = getSecu(tab[i].revenu);
+        age1 = getAge(age[i]);
+        info +=
+          nom +
+          "--" +
+          prenom +
+          "--" +
+          age1 +
+          "--" +
+          revenu +
+          "--" +
+          secu +
+          "\n";
+
         return info;
       }
-      console.log(objet());
+      tab12 = [
+        { nom: "moh", prenom: "max", age: 23, revenu: 1500 },
+        { nom: "souad", prenom: "zak", age: 47, revenu: 4500 },    ];
+
+        function modifier() {
+        $(".b1").attr("href", "https://www.w3schools.com/html/  ");
+        $(".b1  ").text("w3schools.com");
+      }
+
+      function changerPop() {
+        $(".pop").attr("data-content", "descreption de la popover   ");
+        $(".pop  ").text("w3schools");
+      }
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+
+
+
+
+
+        function getClass(note){
+             switch(true){
+          case note <10:
+          return "danger";
+          case note <=15:
+          return "info";
+          default:
+          return "success";
+        }
+
+      }
+
+
+
+      function notes() {
+
+        $("td:last-child").each(function () {
+        //let notes = $(this).text();
+       // let classe=getClasse(note);
+        $(this).html('<button type="button"class="btn btn-'+getClasse(note)+'">'+$(this).text()+'</button>');
+
+
+
+
+
+        });
     </script>
   </body>
 </html>
