@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="css/css images.css" />
 
     <title>JS Exo</title>
-    <body onload="notes()"></body>
   </head>
-  <body>
+    <body onload="notes()"></body>
+
     <h1>Bonjour</h1>
 
     <button onclick="texth1()">Texte du h1</button>
@@ -113,13 +113,13 @@
       </tbody>
     </table>
 
-    <div class="container">
+    <div class="container colon-1" >
       <div class="row">
         <div class="col-sm">
           <img src="../images/html.jpg" height="300" width="500" />
 
           <img src="../images/image.png" height="100" width="100" />
-          <p>Do you need an electrician</p>
+          <p >Do you need an electrician</p>
           <img src="../images/photo7.jpg" height="100" width="100" />
           <p>Do you need an electrician</p>
 
@@ -451,6 +451,7 @@
         //let notes = $(this).text();
        // let classe=getClasse(note);
         $(this).html('<button type="button"class="btn btn-'+getClasse(note)+'">'+$(this).text()+'</button>');
+
 
 
 

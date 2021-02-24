@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/stylesrepas.css" />
+
+
+
+    <title> codage</title>
+  </head>
+  <body>
+    <h1> Codage</h1>
+    <!-- party1: selecte un repas -->
+
+    <p><h3> Selecter votr repas</h3> </p>
+    <select class="custom-select" id="produit" >
+      <option selected>selectez un repas</option>
+      <option value="sandwitch">sandwitch</option>
+      <option value="pizza">pizza</option>
+      <option value="burger">burger</option>
+    </select>
+    <!-- party2: sandwitche -->
+
+
+        <div class="form-check options sandwitch" id="ingredeint">
+          <input class="form-check-input" type="checkbox" value="tomate" id="tomate" />
+          <label class="form-check-label" for="tomate">tomate</label>
+          <input class="form-check-input" type="checkbox" value="salade" id="salade" />
+          <label class="form-check-label" for="salade">salade</label>
+          <input class="form-check-input" type="checkbox" value="oignon" id="oignon" />
+          <label class="form-check-label" for="oignon">oignon</label>
+        </div>
+     <!-- party3:pizza -->
+
+        <div class="form-check options pizza">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="neptune"
+            id="neptune"
+            value="neptune"
+          />
+          <label class="form-check-label" for="neptune"> neptune </label>
+        
+          <input
+            class="form-check-input"
+            type="radio"
+            name="napolitaine"
+            id="napolitaine"
+            value="napolitaine"
+          />
+          <label class="form-check-label" for="napolitaine"> napolitaine </label>
+        
+          <input
+            class="form-check-input"
+            type="radio"
+            name="regina"
+            id="regina"
+            value="regina"
+          />
+          <label class="form-check-label" for="regina"> regina </label>
+        </div>
+    <!-- party4:bergur -->
+
+
+        <div class="form-check options burger">
+          <input class="form-check-input" type="radio" name="gender" name="M" id="M" value="M" >
+          <label class="form-check-label" for="M"> M  </label>
+         <input class="form-check-input" type="radio" name="gender" name="L" id="L" value="L" >
+          <label class="form-check-label" for="L"> L  </label>
+         <input class="form-check-input" type="radio" name="gender" name="XL" id="XL" value="xl" >
+         <label class="form-check-label" for="XL"> XL  </label>
+        </div>
+    <!-- party5:la quantité -->
+
+        <div class="form-group">
+          <label for="quantite">quantité:</label>
+          <input type="number" class="form-control" id="quantite" min="1" />
+        </div>
+        
+        
+    <!-- party6:fichier la commend -->
+                
+   <textarea id="details" name="w3review" rows="6" cols="70" > </textarea>
+    
+   
+
+
+
+
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script> 
+
+
+
+      $(document).ready(function () {
+        $(".options").hide();
+     
+      });
+
+           
+      
+      
+      
+      </script>
+
+
+
+
+  </body>
+</html>

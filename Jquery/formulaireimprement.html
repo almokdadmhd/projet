@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <title>formulaire</title>
+  </head>
+  <body>
+    <form>
+      <div class="form-group">
+        <label for="prouduit">prouduit</label>
+        <input
+          type="text"
+          class="form-control"
+          id="prouduit"
+          placeholder="prouduit"
+        />
+      </div>
+      <div class="form-group">
+        <label for="marque">marque</label>
+        <input
+          type="text"
+          class="form-control"
+          id="marque"
+          placeholder="marque"
+        />
+      </div>
+      <div class="form-group">
+        <label for="modele">modele</label>
+        <input
+          type="text"
+          class="form-control"
+          id="modele"
+          placeholder="modele"
+        />
+      </div>
+      <div class="form-group">
+        <label for="specification">specification</label>
+        <input
+          type="text"
+          class="form-control"
+          id="specification"
+          placeholder="specification"
+        />
+      </div>
+    </form>
+    <button type="button" class="btn btn-primary generer">générer</button>
+    <button type="button" class="btn btn-secondary">réinitialiser</button>
+    <br />
+    <textarea id="mots" name="w3review" rows="6" cols="240"> </textarea>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+
+    <script>
+      $(".generer").click(function () {
+        let produit = $("#prouduit").val();
+        let marque = $("#marque").val();
+        let modele = $("#modele").val();
+        let specification = $("#specification").val();
+
+        let mots = produit + " " + marque + "\n";
+        mots += produit + " " + modele + "\n";
+        mots += marque + " " + modele + "\n";
+        mots += modele + " " + specification + "\n";
+
+        $("#mots").val(mots);
+      });
+    </script>
+  </body>
+</html>
