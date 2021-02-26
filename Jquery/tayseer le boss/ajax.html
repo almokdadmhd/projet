@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Ajax</title>
+  </head>
+  <body class="p-5">
+    <button type="button" onclick="requete()" class="btn btn-primary">
+      Primary
+    </button>
+    <button type="button" onclick="envoie()" class="btn btn-primary">
+      deuxieme
+    </button>
+
+    <div class="yop"></div>
+    <div class="voyonsvoir"></div>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+
+    <script>
+      function requete() {
+        let request = $.ajax({
+          url: "https://jsonplaceholder.typicode.com/posts/",
+          method: "GET",
+          dataType: "json",
+        });
+
+        request.done(function (response) {
+          console.log(response);
+          let bon = [];
+          let resultat =
+            '<table class="table table-striped"> <thead> <tr> <th scope="col">id</th> </tr> </thead> <tbody>';
+          $(response).each(function () {
+            if (bon.indexOf(this.userId) == -1) {
+              bon.push(this.userId);
+              resultat += "<tr><td>" + this.userId + "</td></tr>";
+            }
+          });
+          resultat += "</tbody> </table>";
+          $(".yop").html(resultat);
+        });
+
+        // request.done(function (response) {
+        //   console.log(response);
+        //   let bon = [];
+        //   $(response).each(function () {
+        //     bon.push(this.userId);
+        //   });
+        //   let tab = [];
+        //   for (i = 0; i < bon.length; i++) {
+        //     if (tab.indexOf(bon[i]) == -1) {
+        //       tab.push(bon[i]);
+        //     }
+        //   }
+        //   tableau(tab);
+        // });
+        // function tableau(a) {
+        //   $(".yop").html(
+        //     '<table class="table table-striped"> <thead> <tr> <th scope="col">id</th> </tr> </thead> <tbody></tbody> </table>'
+        //   );
+        //   let t = "";
+        //   for (i = 0; i < a.length; i++) {
+        //     t += "<tr> <td>" + a[i] + "</td></tr> ";
+        //   }
+        //   $(".yop tbody").html(t);
+        // }
+
+        request.fail(function (http_error) {
+          let server_msg = http_error.responseText;
+          let code = http_error.status;
+          let code_label = http_error.statusText;
+          alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
+        });
+
+        request.always(function () {});
+      }
+
+      function envoie() {
+        let tay = $.ajax({
+          url: "https://jsonplaceholder.typicode.com/comments/",
+          method: "GET",
+          dataType: "json",
+        });
+
+        tay.done(function (donnee) {
+         
+         
+        });
+
+        tay.fail(function (http_error) {
+          let server_msg = http_error.responseText;
+          let code = http_error.status;
+          let code_label = http_error.statusText;
+          alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
+        });
+
+        tay.always(function () {});
+      }
+    </script>
+  </body>
+</html>

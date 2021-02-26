@@ -13,13 +13,16 @@
 
     <title>exepmle</title>
   </head>
-  <body>
-    <br />
+  <body onload="requete()">
+    <div id="postes" class="card col-md-2">
+      <h2>ID du post</h2>
+      <div class="card-body">
+        <h5 class="card-title">titre du post</h5>
+        <a class="btn btn-primary">commentaires</a>
+      </div>
+    </div>
 
-    <button type="button" onclick="requete()" class="btn btn-primary">
-      Primary
-    </button>
-    <div id="contenu"></div>
+    <div class="card col-md-2"></div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -32,16 +35,18 @@
           method: "GET",
           dataType: "json",
         });
+        //algooooo
 
         request.done(function (response) {
           let tab = [];
+          console.log(response);
           $.each(response, function () {
-            tab.push(this.userId);
+            tab.push({ id: this.id, titre: this.title });
           });
+          console.log(tab);
 
-          //tab=Array.from(new Set(tab));
-          tab = elimineDoublon(tab);
-          $("#contenu").html(genTab(tab));
+          // tab = elimineDoublon(tab);
+          $("#postes").html(genTab(tab));
         });
 
         request.fail(function (http_error) {
@@ -53,24 +58,19 @@
           alert("Erreur " + code + " (" + code_label + ") : " + server_msg);
         });
       }
-
-      function elimineDoublon(tab) {
-        let tab2 = [];
-        for (i = 0; i < tab.length; i++) {
-          if (tab2.indexOf(tab[i]) === -1) {
-            tab2.push(tab[i]);
-          }
-        }
-        return tab2;
-      }
+      //pour affichier contune html    (generatore)                                              
 
       function genTab(tab) {
-        let chaine =
-          '<table class="table table-striped"><thead>   <tr><th scope="col">#</th></tr></thead><tbody>';
-        for (i = 0; i < tab.length; i++) {
-          chaine += "<tr> <td>" + tab[i] + "</td></tr>";
+        let chaine = '<div class="card row ">';
+        for (i = 0; i < 12; i++) {
+          chaine += "<h2>" + tab[i].id + "</h2>";
+          chaine +=
+            '<div class="card-body"> <h5 class="card-title">' +
+            tab[i].titre +
+            '</h5><a class="btn btn-primary">commentaires</a></div>';
         }
-        chaine += "</tbody></table>";
+        chaine += "</div>";
+
         return chaine;
       }
     </script>

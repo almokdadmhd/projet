@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1  shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>tay bosse</title>
+  </head>
+  <body>
+    <h1 onclick="clickh1()">hello people</h1>
+
+    <h2>bonjour le peuple</h2>
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li class="cacher">3</li>
+      <li class="">4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+    </ul>
+    <button class="btn btn-success b1" onclick="cache()">cache</button>
+    <button class="btn btn-success b3">test add</button>
+    <button class="btn btn-success b2" onclick="calle()">cacher li class</button
+    ><br />
+
+    <img
+      src="https://www.w3schools.com/images/w3jquery.gif"
+      alt="jQuery"
+      width="100"
+      height="140"
+    /><br /><br />
+
+    <button class="btn bg-warning" id="btn1">Insert before</button>
+    <button class="btn bg-danger" id="btn2">Insert after</button><br /><br />
+
+    <div class="btn btn-dark">google</div>
+    <div class="btn btn-dark">Microsoft</div>
+    <div class="btn btn-dark">apple</div>
+    <div class="btn btn-dark">samsung</div>
+
+    <!--script java-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      //   $(document).ready(function () {
+      //     alert("bonjour");
+      //   });
+
+      //   function clickh1() {
+      //     $("h1").hide();
+      //   }
+
+      //   function cache() {
+      //     $(".cacher").toggle();
+      //   }
+      // function calle() {
+      //   document.getElementsByClassName("b2")[0].innerHTML = "apparait";
+      //   $("li:nth-child(2)").toggle();
+      // }
+
+      // $(".b3").click(function () {
+      //   let v = Number($("li:last-child").text()) + 1;
+      //   $("ul").append("<li>" + v + "</li>");
+      //   if (v > 14) {
+      //     $(".b3").hide();
+      //   }
+      // });
+
+      //   $("li").click(function () {
+      //     $(this).hide();
+      //   });
+      // function moyenne(tab) {
+      //   if (tab.length === 0) {
+      //     return 0;
+      //   } else if (typeof tab != "object") {
+      //     return "ce n'est pas un tableau";
+      //   }
+      //   let somme = 0;
+      //   let i;
+      //   for (i = 0; i < tab.length; i++) {
+      //     somme += tab[i];
+      //     if (typeof tab[i] != "number") {
+      //       return "une note n'est pas un nombre";
+      //     }
+      //   }
+      //   return somme / tab.length;
+      // }
+      // let a = [2, 3, 4, 8, 6];
+      // console.log(moyenne(a));
+      // let b = [];
+      // console.log(moyenne(b));
+      // let c = "2";
+      // console.log(moyenne(c));
+      // let r = [2, 4, 5, "t", 6, 8, 7];
+      // console.log(moyenne(r));
+
+      // function maximum(tab) {
+      //   let i;
+      //   let max = tab[0];
+      //   for (i = 0; i < tab.length; i++) {
+      //     if (tab[i] > max) {
+      //       max = tab[i];
+      //     }
+      //   }
+      //   return max;
+      // }
+
+      // let a = [15, 12, 2, 3, 4, 24];
+      // console.log(maximum(a));
+      // a = [45, 52, 102, 33, 124, 24];
+      // console.log(maximum(a));
+
+      // $(document).ready(function () {
+      //   $("#btn1").click(function () {
+      //     $("img").before("<b>Before</b>");
+      //   });
+
+      //   $("#btn2").click(function () {
+      //     $("img").after("<i>After</i>");
+      //   });
+      // });
+
+      // function position(c, tab) {
+      //   let i;
+      //   for (i = 0; i < tab.length; i++) {
+      //     if (tab[i] === c) {
+      //       return i+1;
+      //     }
+      //   }
+      // }
+
+      // function pos(c, tab) {
+      //   let i = 0;
+
+      //   while (i < tab.length) {
+      //     if (tab[i] === c) {
+      //       return i+1;
+      //     }
+      //     i++;
+      //   }
+      // }
+      // let a = [15, 12, 2, 3, 4, 24];
+      // console.log(position(3, a));
+      // console.log(position(4, a));
+      // console.log(position(12, a));
+      // console.log(pos(3, a));
+
+      // function nbjour(mois, annee) {
+      //   if (mois == 2) {
+      //     if (annee % 4 == 0) {
+      //       return 29;
+      //     } else {
+      //       return 28;
+      //     }
+      //   }
+      //   let x = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      //   return x[mois - 1];
+      // }
+      // console.log(nbjour(4, 1990));
+      // console.log(nbjour(8, 2020));
+      // console.log(nbjour(11, 2020));
+      // console.log(nbjour(2, 2010));
+      // console.log(nbjour(2, 1900));
+      // console.log(nbjour(2, 1990));
+
+      // function nbjr(mois, annee) {
+      //   let x = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      //   switch (mois) {
+      //     case 2:
+      //       if ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0) {
+      //         return 29;
+      //       }
+      //      return 28;
+      //
+
+      //     default:
+      //       return x[mois - 1];
+      //   }
+      // }
+      // function test(mois, annee) {
+      //   let x = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+      //   let anneeb = (annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0;
+      //   switch (true) {
+      //     case mois == 2 && anneeb:
+      //       return 29;
+      //     case mois == 2:
+      //       return 28;
+
+      //     default:
+      //       return x[mois - 1];
+      //   }
+      // }
+      //   console.log(test(4, 1990));
+      //   console.log(test(8, 2020));
+      //   console.log(test(11, 2020));
+      //   console.log(test(2, 2020));
+      //   console.log(test(2, 1900));
+      //   console.log(test(2, 1990));
+      //   console.log(test(2, 1996));
+
+      // function inverse(tab) {
+      //   let i;
+      //   let b = "";
+      //   for (i = tab.length - 1; i >=0; i--) {
+      //     b += tab[i];
+      //   }
+      //   return b;
+      // }
+
+      // let a = "!!sruelliem tse rissiaT";
+      // console.log(a[1]);
+      // console.log(inverse(a));
+      // function inverse(tab) {
+      //   let i;
+      //   let b = "";
+      //   for (i = 0; i < tab.length; i++) {
+      //     b += tab[tab.length - 1 - i];
+      //   }
+      //   return b;
+      // }
+
+      // let a = "!!sruelliem tse rissiaT";
+      // console.log(a[1]);
+      // console.log(inverse(a));
+
+      // function nombreDeMots(tab) {
+      //   let i;
+      //   let v = 1;
+      //   for (i = 0; i < tab.length; i++) {
+      //     if (tab[i] === " ") {
+      //       v += 1;
+      //     }
+      //   }
+      //   return v;
+      // }
+      // let a = "taissir est le meilleur.";
+      // console.log(nombreDeMots(a));
+      // let b =
+      //   "taissir est le meilleur gjer ergjer ergjer berlkgjerj ergjer ergjer.";
+      // console.log(nombreDeMots(b));
+
+      // function avecSplit(tab) {
+      //   return tab.split(" ").length;
+      // }
+      // console.log(avecSplit(a));
+      // console.log(avecSplit(b));
+
+      // function compareMots(tab, tab2) {
+      //   return avecsplit(tab) == avecsplit(tab2);
+      // }
+      // console.log(compareMots(a, b));
+      // let c = "a t o g.";
+      // console.log(compareMots(a, c));
+
+      // function carree(x) {
+      //   return x * x;
+      // }
+      // console.log(carree(3));
+
+      // function racinecarree(x) {
+      //   if (x < 0) {
+      //     return -1;
+      //   }
+      //   return Math.sqrt(x);
+      // }
+      // console.log(racinecarree(-4));
+      // console.log(racinecarree(9));
+
+      // function calculde(a, b) {
+      //   let p = 2 * (a + b);
+      //   let s = a * b;
+      //   return (h = "permimetre: " + p + "m" + "\n surface: " + s + "m2");
+      // }
+      // console.log(calculde(4, 6));
+
+      //   function cal(a, b) {
+      //     return a + b < 100;
+      //   }
+      //   console.log(cal(100, 50));
+      //   console.log(cal(10, 50));
+
+      //   function seconde(h, m) {
+      //     return h * 3600 + m * 60;
+      //   }
+      //   console.log(seconde(1, 10));
+
+      //   function secondehm(h, m) {
+      //     return parseFloat(h) * 60 * 60 + parseFloat(m) * 60;
+      //   }
+      //   let c = "1h";
+      //   console.log(Number(c.slice(0, c.length - 1)));
+      //   console.log(secondehm("1h", "10min"));
+
+      // function divisible(a, b) {
+      //   return a % b == 0;
+      // }
+      // console.log(divisible(2, 4));
+      // console.log(divisible(8, 4));
+
+      // function inversiontab(tab) {
+      //   let i;
+      //   let newtab = [];
+      //   for (i = 0; i < tab.length; i++) {
+      //     newtab[i] = tab[tab.length - 1 - i];
+      //
+      //   }
+      //   return newtab;
+      // }
+      // let t = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      // console.log(inversiontab(t));
+      // let c = [5, 9, 7, 55, 8, 2, 6];
+      // console.log(inversiontab(c));
+
+      // function inversionpush(tab) {
+      //   let i;
+      //   let newtab = [];
+      //   for (i = 0; i < tab.length; i++) {
+      //      newtab.push(tab[tab.length - 1 - i]);
+      //   }return newtab
+      // }
+      // console.log(inversionpush(t));
+
+      // function affichage(tab) {
+      //   let i;
+      //   let j = "";
+
+      //   for (i = 0; i < tab.length; i++) {
+      //     let y = tab[i];
+      //     let impot;
+      //     let secu;
+      //     let tranche;
+      //     switch (true) {
+      //       case y["salaire"] <= 1000: //y["salaire"] peut s'ecrire tab[i].salaire
+      //         impot = (y["salaire"] * 7) / 100;
+      //         secu = (y["salaire"] * 6) / 100;
+      //         break;
+      //       case y["salaire"] <= 2000:
+      //         impot = (y["salaire"] * 11) / 100;
+      //         secu = (y["salaire"] * 8) / 100;
+      //         break;
+      //       case y["salaire"] > 2000:
+      //         impot = (y["salaire"] * 15) / 100;
+      //         secu = (y["salaire"] * 12) / 100;
+      //         break;
+      //     }
+
+      //     switch (true) {
+      //       case y["age"] <= 10:
+      //         tranche = "enfant";
+      //         break;
+      //       case y["age"] <= 18:
+      //         tranche = "adolescent";
+      //         break;
+      //       case y["age"] <= 45:
+      //         tranche = "jeune";
+      //         break;
+      //       default:
+      //         tranche = "vieux";
+      //     }
+      //     j +=
+      //       y["nom"] +
+      //       " " +
+      //       y["prenom"] +
+      //       " " +
+      //       impot +
+      //       " " +
+      //       secu +
+      //       " " +
+      //       tranche +
+      //       "\n";
+      //   }
+      //   return j;
+      // }
+
+      // function salaire_secu(y) {
+      //   switch (true) {
+      //     case y["salaire"] <= 1000:
+      //       impot = (y["salaire"] * 7) / 100;
+      //       secu = (y["salaire"] * 6) / 100;
+      //       break;
+      //     case y["salaire"] <= 2000:
+      //       impot = (y["salaire"] * 11) / 100;
+      //       secu = (y["salaire"] * 8) / 100;
+      //       break;
+      //     case y["salaire"] > 2000:
+      //       impot = (y["salaire"] * 15) / 100;
+      //       secu = (y["salaire"] * 12) / 100;
+      //       break;
+      //   }
+      //   return impot + " " + secu;
+      // }
+      // function trancheAge(y) {
+      //   switch (true) {
+      //     case y["age"] <= 10:
+      //       tranche = "enfant";
+      //       break;
+      //     case y["age"] <= 18:
+      //       tranche = "adolescent";
+      //       break;
+      //     case y["age"] <= 45:
+      //       tranche = "jeune";
+      //       break;
+      //     default:
+      //       tranche = "vieux";
+      //   }
+      //   return " " + tranche;
+      // }
+      // function affichageTest(tab) {
+      //   let j = "";
+
+      //   for (i = 0; i < tab.length; i++) {
+      //     j +=
+      //       tab[i].nom +
+      //       " " +
+      //       tab[i].prenom +
+      //       " " +
+      //       salaire_secu(tab[i]) +
+      //       trancheAge(tab[i]) +
+      //       "\n <br/>";
+
+      //   }
+      //   return  j;
+      // }
+
+      // let a = [
+      //   { nom: "tay", prenom: "mohamed", salaire: 2000, age: 18 },
+      //   {
+      //     nom: "tony",
+      //     prenom: "saispa",
+      //     salaire: 900,
+      //     age: 26,
+      //   },
+      // ];
+      // $("#btn2").after("<p>" + affichageTest(a) + "</p>");
+      // console.log(a[0]);
+      // console.log(affichage(a));
+      // console.log(affichageTest(a));
+
+      // //array dans array dans onjet dans array
+      // let e = [
+      //   1,
+      //   2,
+      //   3,
+      //   5,
+      //   { name: "gezhfz", objet: [1, 2, 3, 5, 4, [2, "3tay", 4, 5, 8, 6, 7]] },
+      //   [1, 2, 5, 6, 4],
+      //   6,
+      //   8,
+      // ];
+      // console.log(e);
+      // console.log(e[4].objet[5][1]);
+    </script>
+  </body>
+</html>

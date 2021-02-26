@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1  shrink-to-fit=no"
+    />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>tay bosse</title>
+  </head>
+  <body class="p-5">
+    <a href="https://www.google.com/" id="lien0" target="_blank"
+      ><button class="btn btn-danger" title="google" id="btnlien">
+        Google
+      </button></a
+    >
+
+    <a href="https://www.microsoft.com/fr-fr" id="lien1" target="_blank"
+      ><button class="btn btn-primary" id="btnlien1">Microsoft</button></a
+    >
+    <a href="https://www.apple.com/fr/" id="lien2" target="_blank"
+      ><button class="btn btn-warning" id="btnlien2">Apple</button></a
+    >
+    <a href="https://www.samsung.com/fr/" id="lien3" target="_blank"
+      ><button class="btn btn-secondary" id="btnlien3">Samsung</button></a
+    ><br />
+    <button class="btn btn-success m-5" id="switch">switch</button>
+
+    <button class="btn btn-dark m-5" id="switchover">switchover</button>
+
+    <button
+      type="button"
+      class="btn btn-secondary"
+      data-container="body"
+      data-toggle="popover"
+      data-placement="top"
+      data-content="voici mon popover"
+    >
+      popover
+    </button>
+    <button class="btn btn-dark m-5" id="switchpop">switchpopover</button>
+    <button class="btn btn-dark m-5" id="joue">tay joue</button>
+
+    <h2>
+      o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+      o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o
+    </h2>
+    <table class="table m-5">
+      <thead>
+        <tr>
+          <th>nom prenom</th>
+          <th>note</th>
+        </tr>
+      </thead>
+      <tbody id="monTableau">
+        <tr>
+          <td>tonny montana</td>
+          <td class="note">10</td>
+        </tr>
+        <tr>
+          <td>karim abdulhalik</td>
+          <td class="note">15</td>
+        </tr>
+        <tr>
+          <td>mustapha nour</td>
+          <td class="note">19</td>
+        </tr>
+        <tr>
+          <td>jack rayan</td>
+          <td class="note">5</td>
+        </tr>
+        <tr>
+          <td>bertrand delanoe</td>
+          <td class="note">6</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="row">
+      <div class="col-md-10" id="affichageimage"></div>
+      <div class="col-md-2" id="affichagedescription"></div>
+    </div>
+    <div id="miniature">
+      <img src="../images/anjouan.png" alt="anjouan iles" />
+      <img src="../images/go-home-5.png" alt="icones maison" />
+      <img
+        src="../images/Grande_Comore_topographic_map-fr.svg.png"
+        alt="grande comores"
+      />
+      <img src="../images/MOHELI.png" alt="moheli" />
+    </div>
+
+    <section class="mt-5">
+      <div class="col-8">
+        <form id="formulaire">
+          <div class="form-group">
+            <label for="produit">Produit</label>
+            <input
+              type="text"
+              class="form-control"
+              id="produit"
+              placeholder="quelle produit souhaitez vous ajouter"
+            />
+          </div>
+          <div class="form-group">
+            <label for="marque du produit">Marque</label>
+            <input
+              type="text"
+              class="form-control"
+              id="marque"
+              placeholder="Quelle est la marque de votre produit"
+            />
+          </div>
+          <div class="form-group">
+            <label for="modele du produit">Modele</label>
+            <input
+              type="text"
+              class="form-control"
+              id="modele"
+              placeholder="quel est le modele de votre produit"
+            />
+          </div>
+          <div class="form-group">
+            <label for="specification du produit">Specification</label>
+            <textarea
+              class="form-control"
+              id="specification"
+              rows="3"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Generez</button>
+            <button type="reset" class="btn btn-primary">Reset</button>
+          </div>
+          <div class="form-group">
+            <label for="retour tag">tag retourné</label>
+            <textarea class="form-control" id="retour" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!--script java-->
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      $("#switch").click(function changeLien() {
+        $("a").attr("href", "https://www.w3schools.com/");
+        $("button").text("w3school");
+      });
+
+      $(function () {
+        $('[data-toggle="popover"]').popover();
+      });
+      $("#switchpop").click(function changepop() {
+        $('[data-toggle="popover"]').attr(
+          "data-content",
+          "voici mon pop over changer"
+        );
+      });
+
+      $("#monTableau tr").each(function couleur() {
+        let y = $(this).find("td:last").text();
+        if (y < 10) {
+          $(this).find("td:last").addClass("bg-danger");
+        } else if (y < 15) {
+          $(this).find("td:last").addClass("bg-primary");
+        } else {
+          $(this).find("td:last").addClass("bg-success");
+        }
+      });
+
+      let liste = $(".note")[1].innerText;
+      console.log($("td:last-child")[1].innerText);
+
+      $(document).ready(function coulari() {
+        for (i = 0; i < $("td:last-child").length; i++) {
+          if ($("td:last-child")[i].innerText < 10) {
+            $($("td:last-child")[i]).addClass("bg-danger");
+          } else if ($("td:last-child")[i].innerText < 15) {
+            $($("td:last-child")[i]).addClass("bg-primary");
+          } else {
+            $($("td:last-child")[i]).addClass("bg-success");
+          }
+        }
+      });
+
+      function ololo() {
+        let lettre;
+        $("h2").addClass("allerretour");
+      }
+
+      $("img").click(function () {
+        $("#affichageimage").html(
+          '<img id="affichageimage" src="' + $(this).attr("src") + '">'
+        );
+        $("#affichagedescription").text(textaaf($(this)));
+      });
+      function textaaf(a) {
+        let c = "description 1";
+        let d = "description 2";
+        let e = "description 3";
+        let f = "description 4";
+        switch (true) {
+          case a.attr("src") == "../images/anjouan.png":
+            return c;
+          case a.attr("src") == "../images/go-home-5.png":
+            return d;
+          case a.attr("src") ==
+            "../images/Grande_Comore_topographic_map-fr.svg.png":
+            return e;
+          case a.attr("src") == "../images/MOHELI.png":
+            return f;
+        }
+      }
+      $(document).ready(function () {
+        $("#affichageimage").html(
+          '<img id="affichageimage" src="' +
+            $("img:first-of-type").attr("src") +
+            '">'
+        );
+        $("#affichagedescription").text("description 1");
+      });
+
+      $('[type="submit"]').click(function (e) {
+        e.preventDefault();
+        $("#retour").val(
+          $("#produit").val() +
+            "-" +
+            $("#marque").val() +
+            "," +
+            $("#produit").val() +
+            "-" +
+            $("#modele").val() +
+            "," +
+            $("#produit").val() +
+            "-" +
+            $("#specification").val() +
+            "," +
+            $("#marque").val() +
+            "-" +
+            $("#modele").val() +
+            "," +
+            $("#marque").val() +
+            "-" +
+            $("#specification").val() +
+            "," +
+            $("#specification").val() +
+            "-" +
+            $("#modele").val()
+        );
+        console.log($("#retour").val().split(","));
+      });
+    
+    
+    </script>
+  </body>
+</html>
